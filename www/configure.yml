@@ -1,0 +1,14 @@
+shotgun:
+  site:
+    shotgun_site: YOUR_SHOTGUN_SITE
+    script_name: YOUR_SCRIPT_NAME
+    script_key: YOUR_SCRIPT_KEY
+
+forge:
+  site:
+    forge_site: YOUR_FORGE_WEB_SITE
+    forge_dev_site: https://developer.api.autodesk.com
+    client_id: YOUR_FORGE_CLIENT_ID
+    client_secret:  YOUR_FORGE_CLIENT_SECRET
+  config:
+    bucket_name: YOUR_FORGE_BUCKET_NAME

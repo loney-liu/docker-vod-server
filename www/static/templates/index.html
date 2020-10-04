@@ -1,0 +1,48 @@
+<!doctype html>
+    <title>Forge + Shotgun</title>
+    <h1>This is a demo site for Forge Viewer + Shotgun</h1>
+    <h1>How to use:</h1>
+    <h3>Supported formates</h3>
+    <ul>
+        <li><b>obj</b></li>
+        <li><b>revit</b></li>
+    </ul>
+    <h3> Upload a model to Forge to get Forge URN </h3>
+    <ul>
+        <li> <a href="{{ this_site_url }}/upload">{{ this_site_url }}/upload</a></li>
+    </ul>
+    <h3> Create Fields </h3>
+    <ul><b>Asset</b>
+        <ul>
+            <li> Create text field "Forge URN"</li>
+            <li> Create text field "Forge Tree JSON"</li>
+            <li> Create text field "Forge Property JSON"</li>
+        </ul>
+    </ul>
+    <ul><b>Task</b>
+        <ul>
+            <li> Create text field "Forge Object Tree"</li>
+        </ul>
+    </ul>
+    <h3> Create URL Page </h3>
+    <ul>
+        <ul><b>Asset</b>
+            <li> {{ this_site_url }}/forge_viewer/{sg_forge_urn}</li>
+        </ul>
+        <ul><b>Anotation</b>
+            <li> {{ this_site_url }}/forge_viewer_snap/{sg_forge_urn}/{id}</li>
+        </ul>
+    </ul>
+    <h3> Create AMI for Asset and Task </h3>
+        <ul><b>Asset</b>
+            <ul>
+                <li> {{ this_site_url }}/sg_asset</li>
+                <li> {{ this_site_url }}/forge_viewer_snap</li>
+                <li> {{ this_site_url }}/review_notes</li>
+            </ul>
+        </ul>
+        <ul><b>Task</b> 
+            <ul>
+                <li>{{ this_site_url }}/view_parts</li>
+            </ul>
+        </ul>

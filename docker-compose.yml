@@ -1,0 +1,26 @@
+version: '2'
+services:
+  web:
+      build: ./build/web
+      ports:
+          - "5000:5000"
+      volumes:
+          - ./www:/www
+      restart: always
+
+  streaming-server:
+    image: codeworksio/streaming-server
+    container_name: streaming-server
+    volumes:
+      - ./www/data:/var/lib/streaming:Z
+    ports:
+      - "1935:1935"
+      - "8080:8080"
+
+  streaming-consumer:
+    image: codeworksio/nginx
+    container_name: streaming-consumer
+    volumes:
+      - .:/var/www:ro
+    ports:
+      - "9999:8080"

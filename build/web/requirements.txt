@@ -1,0 +1,15 @@
+pyyaml 
+gunicorn
+Flask
+Jinja2
+Werkzeug
+requests
+Flask-SocketIO
+Flask-Sockets
+gevent
+gevent-websocket
+greenlet
+itsdangerous
+MarkupSafe
+redis
+file:///www/python-api
