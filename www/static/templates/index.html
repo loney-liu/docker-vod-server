@@ -1,12 +1,5 @@
-<!doctype html>
-    <title>Forge + Shotgun</title>
-    <h1>This is a demo site for Forge Viewer + Shotgun</h1>
-    <h1>How to use:</h1>
-    <h3>Supported formates</h3>
-    <ul>
-        <li><b>obj</b></li>
-        <li><b>revit</b></li>
-    </ul>
+{% extends "layout.html" %}
+{% block content %}
     <h3> Upload a model to Forge to get Forge URN </h3>
     <ul>
         <li> <a href="{{ this_site_url }}/upload">{{ this_site_url }}/upload</a></li>
@@ -46,3 +39,5 @@
                 <li>{{ this_site_url }}/view_parts</li>
             </ul>
         </ul>
+
+{% endblock %}
