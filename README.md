@@ -45,6 +45,7 @@ docker-vod-server/www/data/hls
 Edit docker-vod-server/www/i18n.yml
 
 en: English
+
 cn: 中文
 
 ## Attention
