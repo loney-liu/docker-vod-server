@@ -6,6 +6,7 @@ Werkzeug
 requests
 Flask-SocketIO
 Flask-Sockets
+flask_cors
 gevent
 gevent-websocket
 greenlet
