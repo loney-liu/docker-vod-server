@@ -14,5 +14,5 @@ vod:
     data_folder: data/hls
 
 ffmpeg:
-  mp4: ffmpeg,-i,{},-f,mp4,-vcodec,libx264,-pix_fmt,yuv420p,-vf,'scale=trunc((a*oh)/2)*2:720',-g 30,-b:v 2000k,-vprofile,high,-bf,0,-strict,experimental,-acodec,aac,-ab,160k,-ac,2,{}.mp4
-  thumbnail: ffmpeg,-i,{},-ss,00:00:00.001,-vframes,1,{}.jpg
+  mp4: ffmpeg -y -i {} -f mp4 -vcodec libx264 -pix_fmt yuv420p -vf "scale=trunc((a*oh)/2)*2:720" -g 30 -b:v 2000k -vprofile high -bf 0 -strict experimental -acodec aac -ab 160k -ac 2 {}
+  thumbnail: ffmpeg,-y,-i,{},-ss,00:00:00.001,-vframes,1,{}

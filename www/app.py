@@ -2,10 +2,8 @@
 import os
 import base64
 import json
-import datetime
 from datetime import timedelta
 import time
-import subprocess
 import flask
 from flask import Flask, request, render_template, redirect, url_for,session
 from shotgun_api3 import Shotgun
@@ -59,6 +57,8 @@ with open(r'./configure.yml') as file:
 config['media_type'] = configure['shotgun']['media_type']
 config['vod_url'] = "{}{}".format(configure['vod']['site']['ssl'],configure['vod']['site']['url'])
 config['data_folder'] = configure['vod']['site']['data_folder']
+config['ffmpeg_mp4'] = configure['ffmpeg']['mp4']
+config['ffmpeg_thumbnail'] = configure['ffmpeg']['thumbnail']
 
 ################################################################################
 ################            Flask Route              ###########################
@@ -81,7 +81,7 @@ def home():
                                         request.form.get("server_hostname", None)), \
                                         configure['shotgun']['site']['script_name'] , \
                                         configure['shotgun']['site']['script_key'], \
-                                        request.form.get("user_login", None))
+                                        sudo_as_login=request.form.get("user_login", None))
             config["sg"] = sg
             print("config: ", config, flush=True)
         except Exception as e:
@@ -114,8 +114,23 @@ def upload():
             return render_template('%s.html' % 'message', message = ui['message']['no_media_file'])
 
         if transcoder.validate_ext():
-            transcoder.upload_media()
-            return ''
+            data = transcoder.upload_media()
+            print("data: ", data, flush=True)
+
+            if data['use_diy'] == 'on':
+                transcoder.transcode_mp4()
+            elif data['file_ext'] != "mp4":
+                return render_template('%s.html' % 'message', message = ui['message']['ext_must_mp4'])
+            else:
+                transcoder.copy_media()
+
+            transcoder.generate_thumbnail()
+            message = ui['message']['upload_success'].format(data['just_file_name'])
+
+            create_version = entity_handler(config, data)
+            create_version.create_version()
+
+            return render_template('%s.html' % 'message', message = message)
         else:
             return render_template('%s.html' % 'message', message = ui['message']['ext_not_allowed'])
 

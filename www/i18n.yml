@@ -18,6 +18,8 @@ cn:
     select_error: 您选择了{}个条目，只能选择一个条目！
     no_media_file: 没有文件可以上传！
     ext_not_allowed: 不支持此种文件类型！
+    ext_must_mp4: 不转码文件只支持MP4！
+    upload_success: 文件{}上传完成！
 en:
   index:
     title: Upload version
@@ -37,3 +39,5 @@ en:
     select_error: Select {} items，only one is allowed!
     no_media_file: No media file to upload!
     ext_not_allowed: Media type isn't allowed!
+    ext_must_mp4: Only MP4 supported if you don't use DIY transcoding!
+    upload_success: File {} uploaded successfully!
