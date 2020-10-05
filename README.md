@@ -4,17 +4,17 @@
 
 #### Clone git repo
 
-#git clone https://github.com/loney-liu/docker-vod-server
+git clone https://github.com/loney-liu/docker-vod-server
 
-#git submodule update
+git submodule update
 
 #### Build docker image
 
-#cd docker-vod-server
+cd docker-vod-server
 
-#docker-compose build
+sudo docker-compose build
 
-#docker-compose up -d
+sudo docker-compose up -d
 
 #### Test VOD Server
 
