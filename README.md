@@ -37,3 +37,6 @@ docker-vod-server/www/data/hls
 ## Change default language
 
 Edit docker-vod-server/www/i18n.yml
+
+en: English
+cn: 中文
