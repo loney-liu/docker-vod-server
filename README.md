@@ -47,4 +47,4 @@ cn: 中文
 
 ## Attention
 
-If you want to use you VOD server, you are responsible for the data security!
+If you want to use private VOD server, you are responsible for data security!
