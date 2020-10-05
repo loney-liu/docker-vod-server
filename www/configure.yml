@@ -1,14 +1,18 @@
 shotgun:
   site:
-    shotgun_site: YOUR_SHOTGUN_SITE
-    script_name: YOUR_SCRIPT_NAME
-    script_key: YOUR_SCRIPT_KEY
+    ssl: https://
+    script_name: ami_script
+    script_key: ~hc1fobglhmtjkbvmfdBeleyh
+  media_type:
+    - mp4
+    - mov
 
-forge:
+vod:
   site:
-    forge_site: YOUR_FORGE_WEB_SITE
-    forge_dev_site: https://developer.api.autodesk.com
-    client_id: YOUR_FORGE_CLIENT_ID
-    client_secret:  YOUR_FORGE_CLIENT_SECRET
-  config:
-    bucket_name: YOUR_FORGE_BUCKET_NAME
+    ssl: http://
+    url: localhost:8080/hls
+    data_folder: data/hls
+
+ffmpeg:
+  mp4: ffmpeg,-i,{},-f,mp4,-vcodec,libx264,-pix_fmt,yuv420p,-vf,'scale=trunc((a*oh)/2)*2:720',-g 30,-b:v 2000k,-vprofile,high,-bf,0,-strict,experimental,-acodec,aac,-ab,160k,-ac,2,{}.mp4
+  thumbnail: ffmpeg,-i,{},-ss,00:00:00.001,-vframes,1,{}.jpg
