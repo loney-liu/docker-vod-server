@@ -28,6 +28,8 @@ http://localhost:9999
 
 #### How to use in Asset
 
+It only creates version for Asset/Shot/Task. Other entities are not tested.
+
 *Notice:* If you don't want to use DIY transcoding, please upload mp4 media type only.
 
 ![Asset](https://github.com/loney-liu/docker-vod-server/blob/master/demo/Asset.jpg)
