@@ -8,6 +8,8 @@ git clone https://github.com/loney-liu/docker-vod-server
 
 git submodule update
 
+required submodule python-api
+
 ### Build docker image
 
 cd docker-vod-server
@@ -26,6 +28,8 @@ http://localhost:9999
 
 #### How to use in Asset
 
+*Notice:* If you don't want to use DIY transcoding, please upload mp4 media type only.
+
 ![Asset](https://github.com/loney-liu/docker-vod-server/blob/master/demo/Asset.jpg)
 
 ![upload](https://github.com/loney-liu/docker-vod-server/blob/master/demo/Uploader.jpg)
@@ -40,3 +44,7 @@ Edit docker-vod-server/www/i18n.yml
 
 en: English
 cn: 中文
+
+## Attention
+
+If you want to use you VOD server, you are responsible for the data security!
