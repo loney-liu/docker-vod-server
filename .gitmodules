@@ -1,0 +1,3 @@
+[submodule "build/web/python-api"]
+	path = build/web/python-api
+	url = https://github.com/shotgunsoftware/python-api
