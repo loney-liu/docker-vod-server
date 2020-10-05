@@ -6,9 +6,13 @@
 
 git clone https://github.com/loney-liu/docker-vod-server
 
-git submodule update
+#### Required submodule python-api
 
-required submodule python-api
+cd docker-vod-server/build/web/python-api
+
+git submodule init
+
+git submodule update
 
 ### Build docker image
 
