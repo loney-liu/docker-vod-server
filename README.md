@@ -50,7 +50,6 @@ script_name: your_script_name
 script_key: your_application_key
 ```
 
-
 ## Test 
 
 #### Web Server
