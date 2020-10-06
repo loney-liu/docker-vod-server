@@ -3,13 +3,13 @@
 <form action="/upload" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin w3-display-middle" method="post" style="width:450px" enctype=multipart/form-data>
     <h2 class="w3-center">{{i18n['title']}}</h2>
     <div class="w3-row-padding w3-section">
-        <div class="w3-half">
+        <div class="w3-threequarter">
             <span class="w3-badge w3-left w3-margin-right">1</span><label>{{i18n['project_name']}}</label>
             <div class="w3-rest">
                 <input class="w3-input w3-border w3-round-large" name="project_name" type="text" readonly value = {{data["project_name"]}} placeholder="One" >
             </div>
         </div>
-        <div class="w3-half">
+        <div class="w3-quarter">
             <label>{{i18n['project_id']}}</label>
             <div class="w3-rest">
                 <input class="w3-input w3-border w3-round-large" name="project_id" type="text" readonly value = {{data["project_id"]}} placeholder="Two">
@@ -23,13 +23,13 @@
         </div>
     </div>
     <div class="w3-row-padding w3-section">
-        <div class="w3-half">
+        <div class="w3-threequarter">
             <label>{{i18n['entity_name']}}</label>
             <div class="w3-rest">
                 <input class="w3-input w3-border w3-round-large" name="entity_name" type="text" readonly value = {{data["entity_name"]}} placeholder="One">
             </div>
         </div>
-        <div class="w3-half">
+        <div class="w3-quarter">
             {% if data['tasks'] is defined %}
                 <label>{{i18n['entity_id']}}</label>
             {% else %}

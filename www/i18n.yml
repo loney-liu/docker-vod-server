@@ -3,12 +3,12 @@ cn:
   index:
     title: 上传版本
     project_name: 项目名称
-    project_id: 项目编号
+    project_id: 编号
     entity_type: 实体类型
     entity_name: 实体名称
-    entity_id: 实体编号
+    entity_id: 编号
     tasks: 任务列表
-    task_id: 任务编号
+    task_id: 编号
     select_media: 选择媒体文件
     use_diy: 是否使用DIY转码
     create_button: 创建
@@ -24,12 +24,12 @@ en:
   index:
     title: Upload version
     project_name: Project Name
-    project_id: Project ID
+    project_id: ID
     entity_type: Entity Type
     entity_name: Entity Name
-    entity_id: Entity ID
+    entity_id: ID
     tasks: Task
-    task_id: Task ID
+    task_id: ID
     select_media: Select Media
     use_diy: Use DIY Transcoding
     create_button: Create
