@@ -8,23 +8,35 @@ git clone https://github.com/loney-liu/docker-vod-server
 
 #### Required submodule python-api
 
-cd docker-vod-server/build/web/python-api
+$cd docker-vod-server/build/web/python-api
 
-git submodule init
+$git submodule init
 
-git submodule update
+$git submodule update
 
 ### Build docker image
 
-cd docker-vod-server
+$cd docker-vod-server
 
-sudo docker-compose build
+$sudo docker-compose build
 
-sudo docker-compose up -d
+### start docker image
+
+$cd docker-vod-server
+
+$sudo docker-compose up -d
+
+### stop docker image
+
+$cd docker-vod-server
+
+$sudo docker-compose down
 
 ## Test VOD Server
 
 http://localhost:9999
+
+![AMI](https://github.com/loney-liu/docker-vod-server/blob/master/demo/Live_Streaming.jpg)
 
 ## Create Action Menu Item
 
@@ -40,7 +52,9 @@ It only creates version for Asset/Shot/Task. Other entities are not tested.
 
 ![upload](https://github.com/loney-liu/docker-vod-server/blob/master/demo/Uploader.jpg)
 
-## Tested in Screening Room, RV, Create
+## Tested on
+
+Screening Room, RV, Create
 
 ## Data directory
 
