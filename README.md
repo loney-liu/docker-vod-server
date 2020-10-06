@@ -39,13 +39,13 @@ $sudo docker-compose down
 
 ## Test VOD Server
 
-Edit docker-vod-server/index.html. Change `localhost` to `your_vod_server_ip`.
+#### Edit docker-vod-server/index.html. Change `localhost` to `your_vod_server_ip`.
 
 ```
 <source src="http://your_vod_ser_ip:8080/test.mp4" type="video/mp4" />
 ```
 
-http://your_vod_server:9999
+#### http://your_vod_server:9999
 
 ![AMI](https://github.com/loney-liu/docker-vod-server/blob/master/demo/Live_Streaming.jpg)
 
@@ -62,7 +62,7 @@ Selection Required: Selected
 
 ## How to use in Asset
 
-It only creates version for Asset/Shot/Task. Other entities are not tested.
+#### It only creates version for Asset/Shot/Task. Other entities are not tested.
 
 *Notice:* If you don't want to use DIY transcoding, please upload mp4 media type only.
 
@@ -72,7 +72,7 @@ It only creates version for Asset/Shot/Task. Other entities are not tested.
 
 ## Tested on
 
-Screening Room, RV, Create
+#### Screening Room, RV, Create
 
 ## Data directory
 
@@ -80,7 +80,7 @@ docker-vod-server/www/data/hls
 
 ## Change default language
 
-Edit AMI URL
+#### Edit AMI URL
 
 English: http://your_vod_server_ip:5000/en
 
@@ -88,4 +88,4 @@ English: http://your_vod_server_ip:5000/en
 
 ## Attention
 
-If you want to use private VOD server, you are responsible for data security!
+#### If you want to use private VOD server, you are responsible for data security!
