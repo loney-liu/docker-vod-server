@@ -5,7 +5,7 @@ import json
 from datetime import timedelta
 import time
 import flask
-from flask import Flask, request, render_template, redirect, url_for,session
+from flask import Flask, request, render_template, redirect, url_for,session, send_from_directory
 from shotgun_api3 import Shotgun
 import requests
 from datetime import timedelta
@@ -60,21 +60,26 @@ config['ffmpeg_thumbnail'] = configure['ffmpeg']['thumbnail']
 ################################################################################
 ################            Flask Route              ###########################
 ################################################################################
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                          'favicon.ico',mimetype='image/vnd.microsoft.icon')
+
 @app.route("/<language>", methods = ['GET', 'POST'])
 def home(language):
     '''
     Show introduction
     '''
+    ui = i18n[language]
     if request.method == 'POST':
         print("request form: ", request.form, flush = True)
-        ui = i18n[language]
         data = {}
         data['entity_type'] = request.form.get('entity_type', None)
         data['entity_id'] = request.form.get('selected_ids', None)
         data['project_name'] = request.form.get('project_name', None)
         data['project_id'] = request.form.get('project_id', None)
-
-        config['vod_url'] = "{}{}/{}".format(configure['vod']['site']['ssl'],request.host,configure['vod']['site']['url'])
+        hostname = request.host.split(":")
+        config['vod_url'] = "{}{}:{}".format(configure['vod']['site']['ssl'],hostname[0],configure['vod']['site']['url'])
         print("config: ",config, flush=True)
         try:
             sg = Shotgun("{}{}".format(configure['shotgun']['site']['ssl'],\
