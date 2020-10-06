@@ -41,13 +41,22 @@ $sudo docker-compose down
 
 Edit docker-vod-server/index.html. Change `localhost` to `your_vod_server_ip`.
 
-<source src="http://~localhost~your_vod_ser_ip:8080/test.mp4" type="video/mp4" />
+```
+    <source src="http://your_vod_ser_ip:8080/test.mp4" type="video/mp4" />
+```
 
 http://your_vod_server:9999
 
 ![AMI](https://github.com/loney-liu/docker-vod-server/blob/master/demo/Live_Streaming.jpg)
 
 ## Create Action Menu Item
+
+```
+Title: VOD Server
+Entity Type: Asset/Shot/Task
+URL: http://your_vod_server_ip:5000/cn
+Selection Required: Selected
+```
 
 ![AMI](https://github.com/loney-liu/docker-vod-server/blob/master/demo/Action_Menu_Items.jpg)
 
