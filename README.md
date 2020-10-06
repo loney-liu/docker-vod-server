@@ -54,7 +54,7 @@ http://your_vod_server:9999
 ```
 Title: VOD Server
 Entity Type: Asset/Shot/Task
-URL: http://your_vod_server_ip:5000/cn
+URL: http://your_vod_server_ip:5000/en or http://your_vod_server_ip:5000/cn 
 Selection Required: Selected
 ```
 
