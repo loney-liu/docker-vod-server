@@ -40,6 +40,8 @@ It only creates version for Asset/Shot/Task. Other entities are not tested.
 
 ![upload](https://github.com/loney-liu/docker-vod-server/blob/master/demo/Uploader.jpg)
 
+## Tested in Screening Room, RV, Create
+
 ## Data directory
 
 docker-vod-server/www/data/hls
