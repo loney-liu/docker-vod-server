@@ -82,6 +82,7 @@ def home():
                                         configure['shotgun']['site']['script_name'] , \
                                         configure['shotgun']['site']['script_key'], \
                                         sudo_as_login=request.form.get("user_login", None))
+            sg.preferences_read()
             config["sg"] = sg
             print("config: ", config, flush=True)
         except Exception as e:

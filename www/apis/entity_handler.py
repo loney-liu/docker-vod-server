@@ -16,7 +16,7 @@ class entity_handler:
             fields = ['id', 'content']
         else:
             fields = ['id', 'code']
-
+        
         entity = self.sg.find_one(self.data["entity_type"], filters,fields)
 
 

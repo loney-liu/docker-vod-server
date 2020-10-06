@@ -2,7 +2,7 @@ shotgun:
   site:
     ssl: https://
     script_name: ami_script
-    script_key: ~hc1fobglhmtjkbvmfdBeleyh
+    script_key: bgLi_xonzkpibrqpux1rmnbeg
   media_type:
     - mp4
     - mov
@@ -15,4 +15,4 @@ vod:
 
 ffmpeg:
   mp4: ffmpeg -y -i {} -f mp4 -vcodec libx264 -pix_fmt yuv420p -vf "scale=trunc((a*oh)/2)*2:720" -g 30 -b:v 2000k -vprofile high -bf 0 -strict experimental -acodec aac -ab 160k -ac 2 {}
-  thumbnail: ffmpeg,-y,-i,{},-ss,00:00:00.001,-vframes,1,{}
+  thumbnail: ffmpeg,-y,-i,{},-ss,00:00:00.010,-vframes,1,{}
