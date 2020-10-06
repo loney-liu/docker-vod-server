@@ -4,33 +4,38 @@
 
 ### Clone git repo
 
+```
 $git clone https://github.com/loney-liu/docker-vod-server
+```
 
 #### Required submodule python-api
 
+```
 $cd docker-vod-server/build/web/python-api
-
 $git submodule init
-
 $git submodule update
+```
 
 ### Build docker image
 
+```
 $cd docker-vod-server
-
 $sudo docker-compose build
+```
 
 ### start docker image
 
+```
 $cd docker-vod-server
-
 $sudo docker-compose up -d
+```
 
 ### stop docker image
 
+```
 $cd docker-vod-server
-
 $sudo docker-compose down
+```
 
 ## Test VOD Server
 
