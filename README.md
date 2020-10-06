@@ -42,7 +42,7 @@ $sudo docker-compose down
 Edit docker-vod-server/index.html. Change `localhost` to `your_vod_server_ip`.
 
 ```
-    <source src="http://your_vod_ser_ip:8080/test.mp4" type="video/mp4" />
+<source src="http://your_vod_ser_ip:8080/test.mp4" type="video/mp4" />
 ```
 
 http://your_vod_server:9999
@@ -82,9 +82,9 @@ docker-vod-server/www/data/hls
 
 Edit AMI URL
 
-English: http://localhost:5000/en
+English: http://your_vod_server_ip:5000/en
 
-中文: http://localhost:5000/cn
+中文: http://your_vod_server_ip:5000/cn
 
 ## Attention
 
