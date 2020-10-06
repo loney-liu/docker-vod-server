@@ -8,7 +8,7 @@
 $git clone https://github.com/loney-liu/docker-vod-server
 ```
 
-#### Required submodule python-api
+#### Required submodule [python-api](https://github.com/shotgunsoftware/python-api)
 
 ```
 $cd docker-vod-server/build/web/python-api
