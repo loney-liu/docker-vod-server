@@ -28,7 +28,7 @@ http://localhost:9999
 
 ## Create Action Menu Item
 
-![AMI](https://github.com/loney-liu/docker-vod-server/blob/master/demo/Action_Menu_Items.jpg = 250x250)
+![AMI](https://github.com/loney-liu/docker-vod-server/blob/master/demo/Action_Menu_Items.jpg {width=40px height=400px})
 
 ## How to use in Asset
 
@@ -36,9 +36,9 @@ It only creates version for Asset/Shot/Task. Other entities are not tested.
 
 *Notice:* If you don't want to use DIY transcoding, please upload mp4 media type only.
 
-![Asset](https://github.com/loney-liu/docker-vod-server/blob/master/demo/Asset.jpg = 250x250)
+![Asset](https://github.com/loney-liu/docker-vod-server/blob/master/demo/Asset.jpg {width=40px height=400px})
 
-![upload](https://github.com/loney-liu/docker-vod-server/blob/master/demo/Uploader.jpg = 250x250)
+![upload](https://github.com/loney-liu/docker-vod-server/blob/master/demo/Uploader.jpg {width=40px height=400px})
 
 ## Tested in Screening Room, RV, Create
 
