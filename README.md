@@ -2,7 +2,7 @@
 
 ## Install
 
-### Clone git repo
+#### Clone git repo
 
 ```
 $git clone https://github.com/loney-liu/docker-vod-server
@@ -16,21 +16,21 @@ $git submodule init
 $git submodule update
 ```
 
-### Build docker image
+#### Build docker image
 
 ```
 $cd docker-vod-server
 $sudo docker-compose build
 ```
 
-### Start docker image
+#### Start docker image
 
 ```
 $cd docker-vod-server
 $sudo docker-compose up -d
 ```
 
-### Stop docker image
+#### Stop docker image
 
 ```
 $cd docker-vod-server
