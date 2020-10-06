@@ -41,9 +41,7 @@ $sudo docker-compose down
 
 Edit docker-vod-server/index.html. Change `localhost` to `your_vod_server_ip`.
 
-```
-    <source src="http://~localhost~your_vod_ser_ip:8080/test.mp4" type="video/mp4" />
-```
+<source src="http://~localhost~your_vod_ser_ip:8080/test.mp4" type="video/mp4" />
 
 http://your_vod_server:9999
 
