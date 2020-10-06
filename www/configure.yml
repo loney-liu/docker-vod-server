@@ -10,7 +10,7 @@ shotgun:
 vod:
   site:
     ssl: http://
-    url: localhost:8080/hls
+    url: /hls
     data_folder: data/hls
 
 ffmpeg:

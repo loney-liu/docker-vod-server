@@ -50,10 +50,9 @@ with open(r'./configure.yml') as file:
     # The FullLoader parameter handles the conversion from YAML
     # scalar values to Python the dictionary format
     configure = yaml.load(file, Loader=yaml.FullLoader)
-    print("config: ",configure, flush=True)
+    print("configure: ",configure, flush=True)
 
 config['media_type'] = configure['shotgun']['media_type']
-config['vod_url'] = "{}{}".format(configure['vod']['site']['ssl'],configure['vod']['site']['url'])
 config['data_folder'] = configure['vod']['site']['data_folder']
 config['ffmpeg_mp4'] = configure['ffmpeg']['mp4']
 config['ffmpeg_thumbnail'] = configure['ffmpeg']['thumbnail']
@@ -75,6 +74,8 @@ def home(language):
         data['project_name'] = request.form.get('project_name', None)
         data['project_id'] = request.form.get('project_id', None)
 
+        config['vod_url'] = "{}{}/{}".format(configure['vod']['site']['ssl'],request.host,configure['vod']['site']['url'])
+        print("config: ",config, flush=True)
         try:
             sg = Shotgun("{}{}".format(configure['shotgun']['site']['ssl'],\
                                         request.form.get("server_hostname", None)), \
