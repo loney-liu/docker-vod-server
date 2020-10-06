@@ -1,4 +1,3 @@
-default: en
 cn:
   index:
     title: 上传版本

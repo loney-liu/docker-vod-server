@@ -62,11 +62,11 @@ docker-vod-server/www/data/hls
 
 ## Change default language
 
-Edit docker-vod-server/www/i18n.yml
+Edit AMI URL
 
-en: English
+English: http://localhost:5000/en
 
-cn: 中文
+中文: http://localhost:5000/cn
 
 ## Attention
 

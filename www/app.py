@@ -42,8 +42,6 @@ with open(r'./i18n.yml') as file:
     i18n = yaml.load(file, Loader=yaml.FullLoader)
     print("i18n: ",i18n, flush=True)
 
-
-ui = i18n[i18n["default"]]
 ################################################################################
 ################      Shotgun setup and endpoints    ###########################
 ################################################################################
@@ -63,13 +61,14 @@ config['ffmpeg_thumbnail'] = configure['ffmpeg']['thumbnail']
 ################################################################################
 ################            Flask Route              ###########################
 ################################################################################
-@app.route("/", methods = ['GET', 'POST'])
-def home():
+@app.route("/<language>", methods = ['GET', 'POST'])
+def home(language):
     '''
     Show introduction
     '''
     if request.method == 'POST':
         print("request form: ", request.form, flush = True)
+        ui = i18n[language]
         data = {}
         data['entity_type'] = request.form.get('entity_type', None)
         data['entity_id'] = request.form.get('selected_ids', None)
