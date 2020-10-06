@@ -37,16 +37,32 @@ $cd docker-vod-server
 $sudo docker-compose down
 ```
 
-## Test Web Server
+## Configure
 
-#### http://your_vod_server:5000/en
+#### Setup script user in Shotgun
+
+![Script User](https://github.com/loney-liu/docker-vod-server/blob/master/demo/ScriptUser.jpg)
+
+#### Add script user and key to docker-vod-server/www/configure.xml
+
+```
+script_name: your_script_name
+script_key: your_application_key
+```
+
+
+## Test 
+
+#### Web Server
+
+http://your_vod_server:5000/en
 
 ![Sever Up](https://github.com/loney-liu/docker-vod-server/blob/master/demo/Server_is_up.jpg)
 
 
-## Test VOD Server
+#### VOD Server
 
-#### Edit docker-vod-server/index.html. Change `localhost` to `your_vod_server_ip`.
+Edit docker-vod-server/index.html. Change `localhost` to `your_vod_server_ip`.
 
 ```
 <source src="http://your_vod_ser_ip:8080/test.mp4" type="video/mp4" />
