@@ -23,14 +23,14 @@ $cd docker-vod-server
 $sudo docker-compose build
 ```
 
-### start docker image
+### Start docker image
 
 ```
 $cd docker-vod-server
 $sudo docker-compose up -d
 ```
 
-### stop docker image
+### Stop docker image
 
 ```
 $cd docker-vod-server
