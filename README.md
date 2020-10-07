@@ -37,13 +37,31 @@ $cd docker-vod-server
 $sudo docker-compose down
 ```
 
-## Configure
+## Configure AMI
 
 #### Setup script user in Shotgun
 
 ![Script User](https://github.com/loney-liu/docker-vod-server/blob/master/demo/ScriptUser.jpg)
 
 #### Add script user and key to docker-vod-server/www/configure.xml
+
+```
+script_name: your_script_name
+script_key: your_application_key
+```
+
+## Configure Custom URL
+
+#### Setup script user in Shotgun
+
+![Script User](https://github.com/loney-liu/docker-vod-server/blob/master/demo/DesignPage.jpg)
+![Script User](https://github.com/loney-liu/docker-vod-server/blob/master/demo/CustomURL.jpg)
+
+Please replace `your_vod_server_ip` and `your_shotgun_site_url` and keep other parameters.
+
+URL: http://your_vod_server_ip:5000/task_url?language=cn&sg_url=your_shotgun_site_url&user_login={current_user.login}&project_id={project.Project.id}&project_name={project.Project.name}&task_name={content}&task_id={id}
+
+![Script User](https://github.com/loney-liu/docker-vod-server/blob/master/demo/AddPage.jpg)
 
 ```
 script_name: your_script_name

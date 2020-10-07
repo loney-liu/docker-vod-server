@@ -143,8 +143,10 @@ def upload(language):
 
 @app.route("/task_url", methods = ['GET', 'POST'])
 def task_url():
+    '''
+    http://localhost:5000/task_url?language=cn&sg_url=autodesk-china-training.shotgunstudio.com&user_login={current_user.login}&project_id={project.Project.id}&project_name={project.Project.name}&task_name={content}&task_id={id}
+    '''
     language = request.args.get('language')
-
     ui = i18n[language]
     data = {}
     data['entity_type'] = "Task"
