@@ -52,7 +52,7 @@ script_key: your_application_key
 
 ## Configure Custom URL
 
-#### Setup script user in Shotgun
+#### Add a URL page to task
 
 ![Script User](https://github.com/loney-liu/docker-vod-server/blob/master/demo/DesignPage.jpg)
 ![Script User](https://github.com/loney-liu/docker-vod-server/blob/master/demo/CustomURL.jpg)
