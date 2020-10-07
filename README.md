@@ -63,11 +63,6 @@ URL: http://your_vod_server_ip:5000/task_url?language=cn&sg_url=your_shotgun_sit
 
 ![Script User](https://github.com/loney-liu/docker-vod-server/blob/master/demo/AddPage.jpg)
 
-```
-script_name: your_script_name
-script_key: your_application_key
-```
-
 ## Test 
 
 #### Web Server
