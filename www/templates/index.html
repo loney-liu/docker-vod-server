@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
-<form action="/upload" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin w3-display-middle" method="post" style="width:450px" enctype=multipart/form-data>
+<form action="/upload/{{language}}" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin w3-display-middle" method="post" style="width:450px" enctype=multipart/form-data>
     <h2 class="w3-center">{{i18n['title']}}</h2>
     <div class="w3-row-padding w3-section">
         <div class="w3-threequarter">
@@ -72,7 +72,6 @@
         <label>{{i18n['use_diy']}}</label>
         <input class="w3-check" name="use_diy" type="checkbox">
     </div>
-    <input type="hidden" name="language" value={{language}}>
     <p class="w3-center">
         <button class="w3-button w3-section w3-blue w3-ripple"> {{i18n['create_button']}} </button>
     </p>

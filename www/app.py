@@ -108,10 +108,10 @@ def home(language):
     else:
         return render_template('%s.html' % 'message', message = ui['message']['server_up'])
 
-@app.route("/upload", methods = ['POST'])
-def upload():
+@app.route("/upload/<language>", methods = ['POST'])
+def upload(language):
     if request.method == 'POST':
-        ui = i18n[request.form.get("language", 'en')]
+        ui = i18n[language]
         print("request form: ", request.form, flush=True)
         print("request files: ", request.files, flush=True)
 
@@ -140,6 +140,41 @@ def upload():
             return render_template('%s.html' % 'message', message = message)
         else:
             return render_template('%s.html' % 'message', message = ui['message']['ext_not_allowed'])
+
+@app.route("/task_url", methods = ['GET', 'POST'])
+def task_url():
+    language = request.args.get('language')
+
+    ui = i18n[language]
+    data = {}
+    data['entity_type'] = "Task"
+    data['entity_id'] = request.args.get('task_id')
+    data['project_name'] = request.args.get('project_name')
+    data['project_id'] = request.args.get('project_id')
+    hostname = request.host.split(":")
+    config['vod_url'] = "{}{}:{}".format(configure['vod']['site']['ssl'],hostname[0],configure['vod']['site']['url'])
+    print("config: ",config, flush=True)
+    print("server_host: ",request.args.get("sg_url", None), flush=True)
+    try:
+        sg = Shotgun("{}{}".format(configure['shotgun']['site']['ssl'],\
+                                        request.args.get("sg_url", None)), \
+                                        configure['shotgun']['site']['script_name'] , \
+                                        configure['shotgun']['site']['script_key'], \
+                                        sudo_as_login=request.args.get('user_login', 'None'))
+        sg.preferences_read()
+        config["sg"] = sg
+        print("config: ", config, flush=True)
+    except Exception as e:
+        return render_template('%s.html' % 'message', message = ui['message']['auth_error'])
+
+    entityhandler = entity_handler(config, data)
+
+    if data["entity_type"] != "Task":
+        data['tasks'] = entityhandler.get_tasks()
+        print("Tasks: ", data['tasks'], flush=True)
+
+    data['entity_name'] = entityhandler.get_entity_name()
+    return render_template('%s.html' % 'index', data = data, i18n=ui["index"], language = language)
 
 ################################################################################
 ################                   Main              ###########################
