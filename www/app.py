@@ -101,7 +101,7 @@ def home(language):
                 print("Tasks: ", data['tasks'], flush=True)
 
             data['entity_name'] = entityhandler.get_entity_name()
-            return render_template('%s.html' % 'index', data = data, i18n=ui["index"])
+            return render_template('%s.html' % 'index', data = data, i18n=ui["index"], language = language)
         else:
             message = ui['message']['select_error'].format(len(data['entity_id'].split(",")))
             return render_template('%s.html' % 'message', message = message)
@@ -111,6 +111,7 @@ def home(language):
 @app.route("/upload", methods = ['POST'])
 def upload():
     if request.method == 'POST':
+        ui = i18n[request.form.get("language", 'en')]
         print("request form: ", request.form, flush=True)
         print("request files: ", request.files, flush=True)
 
