@@ -54,10 +54,11 @@ script_key: your_application_key
 
 #### Add a URL page to task
 
-![Script User](https://github.com/loney-liu/docker-vod-server/blob/master/demo/DesignPage.jpg)
-![Script User](https://github.com/loney-liu/docker-vod-server/blob/master/demo/CustomURL.jpg)
+![Design PAge](https://github.com/loney-liu/docker-vod-server/blob/master/demo/DesignPage.jpg)
+![Custom URL](https://github.com/loney-liu/docker-vod-server/blob/master/demo/CustomURL.jpg)
 
 ```
+
 Please replace `your_vod_server_ip` and `your_shotgun_site_url` and keep other parameters.
 English: language=en
 Chinese: language=cn
@@ -65,7 +66,7 @@ Chinese: language=cn
 
 URL: http://your_vod_server_ip:5000/task_url?language=en&sg_url=your_shotgun_site_url&user_login={current_user.login}&project_id={project.Project.id}&project_name={project.Project.name}&task_name={content}&task_id={id}
 
-![Script User](https://github.com/loney-liu/docker-vod-server/blob/master/demo/AddPage.jpg)
+![Add Page](https://github.com/loney-liu/docker-vod-server/blob/master/demo/AddPage.jpg)
 
 ## Test 
 
