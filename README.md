@@ -64,7 +64,7 @@ English: language=en
 Chinese: language=cn
 ```
 
-URL: http://your_vod_server_ip:5000/task_url?language=en&sg_url=your_shotgun_site_url&user_login={current_user.login}&project_id={project.Project.id}&project_name={project.Project.name}&task_name={content}&task_id={id}
+`URL: http://your_vod_server_ip:5000/task_url?language=en&sg_url=your_shotgun_site_url&user_login={current_user.login}&project_id={project.Project.id}&project_name={project.Project.name}&task_name={content}&task_id={id}`
 
 ![Add Page](https://github.com/loney-liu/docker-vod-server/blob/master/demo/AddPage.jpg)
 
