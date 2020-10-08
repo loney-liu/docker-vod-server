@@ -13,7 +13,7 @@ cn:
     create_button: 创建
   message:
     server_up: 服务器准备就绪。
-    auth_error: 请检查Shotgun API脚本和脚本密钥！
+    auth_error: 请检查Shotgun API脚本和脚本密钥！编辑 www/configure.yml
     select_error: 您选择了{}个条目，只能选择一个条目！
     no_media_file: 没有文件可以上传！
     ext_not_allowed: 不支持此种文件类型！
@@ -34,7 +34,7 @@ en:
     create_button: Create
   message:
     server_up: Server is up.
-    auth_error: Please check Shotgun API script user and key! 
+    auth_error: Please check Shotgun API script user and key! Edit www/configure.yml
     select_error: Select {} items，only one is allowed!
     no_media_file: No media file to upload!
     ext_not_allowed: Media type isn't allowed!
