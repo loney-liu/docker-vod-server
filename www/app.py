@@ -87,9 +87,9 @@ def home(language):
                                         configure['shotgun']['site']['script_name'] , \
                                         configure['shotgun']['site']['script_key'], \
                                         sudo_as_login=request.form.get("user_login", None))
-            sg.preferences_read()
+            
             config["sg"] = sg
-            print("config: ", config, flush=True)
+            print("prefs: ", sg.preferences_read(), flush=True)
         except Exception as e:
             return render_template('%s.html' % 'message', message = ui['message']['auth_error'])
         if len(data['entity_id'].split(",")) == 1:
@@ -163,9 +163,8 @@ def task_url():
                                         configure['shotgun']['site']['script_name'] , \
                                         configure['shotgun']['site']['script_key'], \
                                         sudo_as_login=request.args.get('user_login', 'None'))
-        sg.preferences_read()
         config["sg"] = sg
-        print("config: ", config, flush=True)
+        print("prefs: ", sg.preferences_read(), flush=True)
     except Exception as e:
         return render_template('%s.html' % 'message', message = ui['message']['auth_error'])
 
