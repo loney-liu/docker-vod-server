@@ -92,7 +92,7 @@ Edit docker-vod-server/index.html. Change `localhost` to `your_vod_server_ip`.
 ## Create Action Menu Item
 
 ```
-Title: VOD Server
+Title: VOD Server (Or whatever you like)
 Entity Type: Asset/Shot/Task
 URL: http://your_vod_server_ip:5000/en or http://your_vod_server_ip:5000/cn 
 Selection Required: Selected
