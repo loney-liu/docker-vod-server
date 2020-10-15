@@ -73,6 +73,7 @@ def home(language):
     ui = i18n[language]
     if request.method == 'POST':
         print("request form: ", request.form, flush = True)
+        print("request form: ", list(request.form), flush = True)
         data = {}
         data['entity_type'] = request.form.get('entity_type', None)
         data['entity_id'] = request.form.get('selected_ids', None)
