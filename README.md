@@ -1,5 +1,7 @@
 # Use private VOD server for review.
 
+## Note: Safari doesn't work properly. Please use Chrome or Firefox
+
 ## Install
 
 #### Clone git repo
