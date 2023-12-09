@@ -1,6 +1,8 @@
 # Use private VOD server for review.
 
-## Note: Safari doesn't work properly. Please use Chrome or Firefox
+## Note: 
+1. Safari doesn't work properly. Please use Chrome or Firefox
+2. https is required.
 
 ## Install
 
@@ -66,7 +68,7 @@ English: language=en
 Chinese: language=cn
 ```
 
-`URL: http://your_vod_server_ip:5000/task_url?language=en&sg_url=your_shotgun_site_url&user_login={current_user.login}&project_id={project.Project.id}&project_name={project.Project.name}&task_name={content}&task_id={id}`
+`URL: https://your_vod_server_ip:5000/task_url?language=en&sg_url=your_shotgun_site_url&user_login={current_user.login}&project_id={project.Project.id}&project_name={project.Project.name}&task_name={content}&task_id={id}`
 
 ![Add Page](https://github.com/loney-liu/docker-vod-server/blob/master/demo/AddPage.jpg)
 
@@ -74,7 +76,7 @@ Chinese: language=cn
 
 #### Web Server
 
-http://your_vod_server:5000/en
+https://your_vod_server:5000/en
 
 ![Sever Up](https://github.com/loney-liu/docker-vod-server/blob/master/demo/Server_is_up.jpg)
 
@@ -84,10 +86,10 @@ http://your_vod_server:5000/en
 Edit docker-vod-server/index.html. Change `localhost` to `your_vod_server_ip`.
 
 ```
-<source src="http://your_vod_ser_ip:8080/test.mp4" type="video/mp4" />
+<source src="https://your_vod_ser_ip:8080/test.mp4" type="video/mp4" />
 ```
 
-#### http://your_vod_server:9999
+#### https://your_vod_server:9999
 
 ![AMI](https://github.com/loney-liu/docker-vod-server/blob/master/demo/Live_Streaming.jpg)
 
@@ -96,7 +98,7 @@ Edit docker-vod-server/index.html. Change `localhost` to `your_vod_server_ip`.
 ```
 Title: VOD Server (Or whatever you like)
 Entity Type: Asset/Shot/Task
-URL: http://your_vod_server_ip:5000/en or http://your_vod_server_ip:5000/cn 
+URL: https://your_vod_server_ip:5000/en or http://your_vod_server_ip:5000/cn 
 Selection Required: Selected
 ```
 
@@ -124,9 +126,9 @@ docker-vod-server/www/data/hls
 
 #### Edit AMI URL
 
-English: http://your_vod_server_ip:5000/en
+English: https://your_vod_server_ip:5000/en
 
-中文: http://your_vod_server_ip:5000/cn
+中文: https://your_vod_server_ip:5000/cn
 
 ## Attention
 
