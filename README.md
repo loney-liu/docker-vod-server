@@ -88,7 +88,7 @@ Chinese: language=cn
 
 
 #### CustomEntity<Number>
-`URL: https://your_vod_server/task_url?language=cn&sg_url=autodesk-china-training.shotgunstudio.com&user_login={current_user.login}&project_id={project.Project.id}&project_name={project.Project.name}&task_name={content}&task_id={id}&content={content}&link_id={entity.Shot.id}&link_name={entity.<CustomEntityNumberß>.code}`
+`URL: https://your_vod_server/task_url?language=cn&sg_url=autodesk-china-training.shotgunstudio.com&user_login={current_user.login}&project_id={project.Project.id}&project_name={project.Project.name}&task_name={content}&task_id={id}&content={content}&link_id={entity.Shot.id}&link_name={entity.<CustomEntityNumber>.code}`
 
 
 ![Add Page](https://github.com/loney-liu/docker-vod-server/blob/master/demo/AddPage.jpg)
