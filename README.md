@@ -67,8 +67,11 @@ Please replace `your_vod_server_ip` and `your_shotgun_site_url` and keep other p
 English: language=en
 Chinese: language=cn
 ```
+#### Asset
+`https://your_vod_server/task_url?language=cn&sg_url=autodesk-china-training.shotgunstudio.com&user_login={current_user.login}&project_id={project.Project.id}&project_name={project.Project.name}&task_name={content}&task_id={id}&link_id={entity.Asset.id}&link_name={entity.Asset.code}`
 
-`URL: https://your_vod_server_ip:5000/task_url?language=en&sg_url=your_shotgun_site_url&user_login={current_user.login}&project_id={project.Project.id}&project_name={project.Project.name}&task_name={content}&task_id={id}`
+#### Shot
+`URL: https://your_vod_server/task_url?language=cn&sg_url=autodesk-china-training.shotgunstudio.com&user_login={current_user.login}&project_id={project.Project.id}&project_name={project.Project.name}&task_name={content}&task_id={id}&content={content}&link_id={entity.Shot.id}&link_name={entity.Shot.code}`
 
 ![Add Page](https://github.com/loney-liu/docker-vod-server/blob/master/demo/AddPage.jpg)
 
