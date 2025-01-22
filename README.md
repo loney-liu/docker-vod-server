@@ -75,11 +75,11 @@ script_key: your_application_key
 ![Custom URL](https://github.com/loney-liu/docker-vod-server/blob/master/demo/CustomURL.jpg)
 
 ```
-
 Please replace `your_vod_server_ip` and `your_shotgun_site_url` and keep other parameters.
 English: language=en
 Chinese: language=cn
 ```
+
 #### Asset
 `https://your_vod_server/task_url?language=cn&sg_url=autodesk-china-training.shotgunstudio.com&user_login={current_user.login}&project_id={project.Project.id}&project_name={project.Project.name}&task_name={content}&task_id={id}&link_id={entity.Asset.id}&link_name={entity.Asset.code}`
 
@@ -119,7 +119,7 @@ Edit docker-vod-server/index.html. Change `localhost` to `your_vod_server_ip`.
 ```
 Title: VOD Server (Or whatever you like)
 Entity Type: Asset/Shot/Task
-URL: https://your_vod_server_ip:5000/en or https://your_vod_server_ip:5000/cn 
+URL: https://your_vod_server_ip/en or https://your_vod_server_ip/cn 
 Selection Required: Selected
 ```
 
