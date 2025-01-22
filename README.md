@@ -14,7 +14,7 @@ This is an example to create certification for the test domain "f.ll.tt". Please
 ### CopyParty
 In this version, the file server is changed to copyparty. 
 1. https://your_domain_name will show all files uploaded.
-2. Put combined certification into `config/copyparty/cert.pem` *Please don't change `cert.pem`*
+2. Put combined certification into `config/copyparty/cert.pem` *Please don't change file name `cert.pem`*
 3. Private key is always on the top of the combined certification.
 
 ## Install
