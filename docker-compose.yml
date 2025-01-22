@@ -1,26 +1,45 @@
-version: '2'
+#version: '2'
 services:
   web:
       build: ./build/web
-      ports:
-          - "5000:5000"
       volumes:
           - ./www:/www
       restart: always
 
-  streaming-server:
-    image: codeworksio/streaming-server
-    container_name: streaming-server
+  ##################################################################
+  ## This is new file server, it may replace the old streaming server above
+  copyparty:
+    image: copyparty/ac:latest
+    container_name: copyparty
+    # user: "1000:1000"
+    # ports:
+    #   - 3923:3923
     volumes:
-      - ./www/data:/var/lib/streaming:Z
-    ports:
-      - "1935:1935"
-      - "8080:8080"
+      - ./config:/cfg:z
+      - ./www/data:/w:z
 
-  streaming-consumer:
-    image: codeworksio/nginx
-    container_name: streaming-consumer
-    volumes:
-      - .:/var/www:ro
+    stop_grace_period: 15s  # thumbnailer is allowed to continue finishing up for 10s after the shutdown signal
+    healthcheck:
+      test: ["CMD-SHELL", "wget --spider -q 127.0.0.1:3923/?reset"]
+      interval: 1m
+      timeout: 2s
+      retries: 5
+      start_period: 15s
+  ##################################################################
+  proxy:
+    build: ./proxy/setup
     ports:
-      - "9999:8080"
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./proxy/config:/usr/local/etc/haproxy/config
+      - ./proxy/certs:/usr/local/etc/haproxy/certs
+      - ./proxy/custom_errors:/usr/local/etc/haproxy/custom_errors
+    depends_on:
+      - copyparty
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "2g"
+        max-file: "20"

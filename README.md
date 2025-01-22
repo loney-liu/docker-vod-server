@@ -86,7 +86,7 @@ https://your_vod_server:5000/en
 Edit docker-vod-server/index.html. Change `localhost` to `your_vod_server_ip`.
 
 ```
-<source src="https://your_vod_ser_ip:8080/test.mp4" type="video/mp4" />
+<source src="https://your_vod_ser_ip/test.mp4" type="video/mp4" />
 ```
 
 #### https://your_vod_server:9999
