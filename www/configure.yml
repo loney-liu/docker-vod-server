@@ -1,0 +1,24 @@
+shotgun:
+  site:
+    ssl: https://
+    script_name: my_script
+    script_key: lgr$tnylYiuqzhqn7ttdmidjr
+  media_type:
+    - mp4
+    - mov
+    - jpg
+    - png
+
+vod:
+  site:
+    ssl: https://
+    url: /hls
+    data_folder: data/hls
+
+video:
+  mp4: ffmpeg -hide_banner -loglevel warning -y -i {} -f mp4 -vcodec libx264 -pix_fmt yuv420p -vf "scale=trunc((a*oh)/2)*2:720" -g 30 -b:v 2000k -vprofile high -bf 0 -strict experimental -acodec aac -ab 160k -ac 2 {}
+  thumbnail: ffmpeg,-hide_banner,-loglevel,warning,-y,-i,{},-ss,00:00:00.010,-vf,scale=trunc((a*oh)/2)*2:1080,-vframes,1,{}
+
+image:
+  image:  ffmpeg -hide_banner -loglevel warning -threads 2 -y -i {} -an -vcodec libx264 -pix_fmt yuv420p -vf 'scale=trunc((a*oh)/2)*2:1080' -g 30 -vprofile high -bf 0 -crf 23 -thread_type slice+frame -f mp4 {}
+  thumbnail: ffmpeg,-hide_banner,-loglevel,warning,-y,-i,{},-ss,00:00:00.010,-vf,scale=trunc((a*oh)/2)*2:1080,-vframes,1,{}
