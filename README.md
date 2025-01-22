@@ -97,20 +97,14 @@ Chinese: language=cn
 
 #### Web Server
 
-https://your_vod_server:5000/en
+https://your_vod_server/en
 
 ![Sever Up](https://github.com/loney-liu/docker-vod-server/blob/master/demo/Server_is_up.jpg)
 
 
 #### VOD Server
 
-Edit docker-vod-server/index.html. Change `localhost` to `your_vod_server_ip`.
-
-```
-<source src="https://your_vod_ser_ip/test.mp4" type="video/mp4" />
-```
-
-#### https://your_vod_server
+https://your_vod_server
 
 ![AMI](https://github.com/loney-liu/docker-vod-server/blob/master/demo/vod.jpg)
 
