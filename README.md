@@ -5,9 +5,17 @@
 2. https is required.
 
 ## Generate certification for your domain
+
+### HA-Proxy
 This is an example to create certification for the test domain "f.ll.tt". Please change it to your domain. And you could use your faviorate tool to configure reversed proxy.
 
 ![Create Certificaton for HA-Proxy](https://github.com/loney-liu/docker-vod-server/blob/master/proxy/certs/SelfSignedCACert.txt)
+
+### CopyParty
+In this version, the file server is changed to copyparty. 
+1. https://your_domain_name will show all files uploaded.
+2. Put combined certification into `config/copyparty/cert.pem` *Please don't change `cert.pem`
+3. Private key is always on the top of the combined certification.
 
 ## Install
 
