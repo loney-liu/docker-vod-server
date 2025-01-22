@@ -9,7 +9,7 @@
 ### HA-Proxy
 This is an example to create certification for the test domain "f.ll.tt". Please change it to your domain. And you could use your faviorate tool to configure reversed proxy.
 
-[Create Certificaton for HA-Proxy](https://github.com/loney-liu/docker-vod-server/blob/master/proxy/certs/SelfSignedCACert.me)
+[Create Certificaton for HA-Proxy](https://github.com/loney-liu/docker-vod-server/blob/master/proxy/certs/SelfSignedCACert.md)
 
 ### CopyParty
 In this version, the file server is changed to copyparty. 
