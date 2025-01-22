@@ -21,6 +21,7 @@ openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 \
     -keyout cert.key  -out cert.crt
 
 ### Generate combined_cert.pem
+
 ```
 cat cert.key cert.crt> combined_cert.pem
 ```
