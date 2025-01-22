@@ -80,14 +80,14 @@ English: language=en
 Chinese: language=cn
 ```
 
-#### Asset
+#### Asset Task
 `https://your_vod_server/task_url?language=cn&sg_url=autodesk-china-training.shotgunstudio.com&user_login={current_user.login}&project_id={project.Project.id}&project_name={project.Project.name}&task_name={content}&task_id={id}&link_id={entity.Asset.id}&link_name={entity.Asset.code}`
 
-#### Shot
+#### Shot Task
 `URL: https://your_vod_server/task_url?language=cn&sg_url=autodesk-china-training.shotgunstudio.com&user_login={current_user.login}&project_id={project.Project.id}&project_name={project.Project.name}&task_name={content}&task_id={id}&content={content}&link_id={entity.Shot.id}&link_name={entity.Shot.code}`
 
 
-#### CustomEntity<Number>
+#### CustomEntity<Number> Task
 `URL: https://your_vod_server/task_url?language=cn&sg_url=autodesk-china-training.shotgunstudio.com&user_login={current_user.login}&project_id={project.Project.id}&project_name={project.Project.name}&task_name={content}&task_id={id}&content={content}&link_id={entity.Shot.id}&link_name={entity.<CustomEntityNumber>.code}`
 
 
@@ -110,9 +110,9 @@ Edit docker-vod-server/index.html. Change `localhost` to `your_vod_server_ip`.
 <source src="https://your_vod_ser_ip/test.mp4" type="video/mp4" />
 ```
 
-#### https://your_vod_server:9999
+#### https://your_vod_server
 
-![AMI](https://github.com/loney-liu/docker-vod-server/blob/master/demo/Live_Streaming.jpg)
+![AMI](https://github.com/loney-liu/docker-vod-server/blob/master/demo/vod.jpg)
 
 ## Create Action Menu Item
 
