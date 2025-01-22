@@ -4,6 +4,11 @@
 1. Safari doesn't work properly. Please use Chrome or Firefox
 2. https is required.
 
+## Generate certification for your domain
+This is an example to create certification for the test domain "f.ll.tt". Please change it to your domain. And you could use your faviorate tool to configure reversed proxy.
+
+![Create Certificaton for HA-Proxy](https://github.com/loney-liu/docker-vod-server/blob/master/proxy/certs/SelfSignedCACert.txt)
+
 ## Install
 
 #### Clone git repo
@@ -72,6 +77,11 @@ Chinese: language=cn
 
 #### Shot
 `URL: https://your_vod_server/task_url?language=cn&sg_url=autodesk-china-training.shotgunstudio.com&user_login={current_user.login}&project_id={project.Project.id}&project_name={project.Project.name}&task_name={content}&task_id={id}&content={content}&link_id={entity.Shot.id}&link_name={entity.Shot.code}`
+
+
+#### CustomEntity<Number>
+`URL: https://your_vod_server/task_url?language=cn&sg_url=autodesk-china-training.shotgunstudio.com&user_login={current_user.login}&project_id={project.Project.id}&project_name={project.Project.name}&task_name={content}&task_id={id}&content={content}&link_id={entity.Shot.id}&link_name={entity.<CustomEntityNumberß>.code}`
+
 
 ![Add Page](https://github.com/loney-liu/docker-vod-server/blob/master/demo/AddPage.jpg)
 
